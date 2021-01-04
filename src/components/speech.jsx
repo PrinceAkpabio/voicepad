@@ -41,18 +41,19 @@ const Speech = () => {
   }, [currentText])
   // HANDLE SPEECH CONVERSION
   const HandleSpeech = () => {
-    fetch('/request', {
-      method: 'POST',
-      body: {
-        "content": "true"
-      },
-      headers: {
-        "Content-type": "application/json"
-      }
-    }).then(res => res.json()).then(data => {
-      const output = data
-      setCurrentText(output.text)
-    })
+    
+    // fetch('/request', {
+    //   method: 'POST',
+    //   body: {
+    //     "content": "true"
+    //   },
+    //   headers: {
+    //     "Content-type": "application/json"
+    //   }
+    // }).then(res => res.json()).then(data => {
+    //   const output = data
+    //   setCurrentText(output.text)
+    // })
   }
 
   // SOUND FOR MICROPHONE
